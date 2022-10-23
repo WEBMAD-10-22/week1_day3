@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+</head>
+
+<body>
+    <script>
+        // 1) PRIMITIVE DATA TYPES
+
+        let favoriteWord = 'tree'; // NUMBER
+        let favoriteNumber = 5; // STRING
+        const isFavoriteNumber = true; // BOOLEAN
+        const hasName = true; // BOOLEAN
+        let undefinedValue = undefined // UNDEFINED
+        let nullValue = null // NULL
+        let userName = Symbol('alberto') // SYMBOL
+        let hugeNumber = BigInt(9007199254740991) // BIGINT 
+
+        // Las palabras clave "const" y "let" no pueden ser usadas para redeclarar variables
+        // "var", sí.
+
+        // const favoriteColor = 'darkblue'
+        // const favoriteColor = 'darkblue'
+
+        // Es necesario comentar las variables de las líneas 27 y 29 para ver esto en juego.
+
+        var favoriteColor = 'green'
+        var favoriteColor = 'green'
+
+        // 2) VARIABLES
+
+        // const userName = 'Tito'
+        // userName = 'Dani' // Variables declaradas con const no son reasignables
+
+        // Podemos reasignar valores a las variables declaradas con la palabra clave "let" 
+        // Cualquier otro valor es asignable a una variable --> JS no es un lenguaje TIPADO, a diferencia de TYPESCRIPT
+
+        let easiestWord = 'tree';
+        let luckyNumber = 5;
+
+        easiestWord = true
+
+        {
+            var bestFriend = 'Santiago'
+        }
+
+        for (let i = 0; i < 10; i++) {
+            var bestFriend = 'Santiago'
+        }
+
+        console.log(bestFriend) // bestFriend es accesible fuera del bloque al usar "VAR"
+
+        // "VAR" tiene FUNCTION Scope. Este es el único caso en el que no podríamos acceder a este valor en bloque
+
+        function sayHi() {
+            var bestFriend = 'Santiago'
+        }
+
+        // Var TEMPORAL DEAD ZONE vs Const, let
+
+        console.log(bestFriend) // undefined, const y let lanzarían un error.
+        var bestFriend = 'Santi'
+
+        // Como regla general, UTILIZAMOS "const" y "let" cuando declaramos variables.
+
+        // 3) STRINGS
+
+        // Podemos crear strings con "", '' o ``
+
+        let name = 'Hong'
+        let greeting = 'Hola ' + name
+        let finalWord = `This is my ${name}`
+
+        const bearerToken = 'bearer:0xWFWFWEFWEEWFWFWINWE'
+        console.log(bearerToken.slice(7))
+
+        console.log(name.reverse()) // Reverse NO es un método propio de las strings
+        // Para invertir el orden de los caracteres de una string podemos transformarla previamente en Array
+
+        const coolestSneaker = 'Stan Smith'
+        console.log(coolestSneaker.startsWith('Stan'))
+
+        console.log('arbolito' / 'tree') // NaN es el resultado de operaciones sin sentido en JS
+
+        let stringNumber = "2.555" // Podemos transformar una string a número a través de distintos operadores y métodos:
+        console.log(+stringNumber)
+        console.log(Number(stringNumber))
+        console.log(parseInt(stringNumber))
+
+        // 4) NUMBERS
+
+        // finalSum+=1
+        // finalSum = finalSum + 1
+        // finalSum--
+
+        // console.log(Math.random())
+        // console.log(stringNumber)
+
+        // let kidAge = 5
+        // console.log(typeof kidAge.toString())
+
+        // console.log(typeof Number("5"))
+
+
+        // 5) BOOLEANS
+
+        const positiveValue = true
+        const negativeValue = false
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditionals</title>
+</head>
+
+<body>
+    <script>
+        // truthy and falsy values
+
+        const colors = [] // Un array vacío es un truthy. Esto es comprobable a través de "!!([])"
+
+        if (!colors) {
+            console.log('La criatura está llena')
+        }
+        else {
+            console.log('NO me jodas tío')
+        }
+
+        // Podemos servirnos del length de un array para saber si está vacío.
+
+        [].length === 0 // --> falsy
+
+        // Logical operators , Short circuit evaluation
+
+        if (false || false) {
+            console.log('La LÓGICA ME ENCANTA')
+        }
+        else {
+            console.log('NO SALIÓOOOO')
+        }
+
+        const favoriteName = false || 'Paula' // El disyuntor pasa a evaluar el lado derecho del cortocircuito para ser verdadero
+        console.log(favoriteName)
+
+        const theTruth = true
+        console.log(!theTruth) // "!" devuelve el valor opuesto de un valor booleano
+
+        const isJumping = false
+        !isJumping && console.log('puedes saltar, bebé') // Esta lógica podremos usarla al crear un videojuego
+
+        const data = ['Tree', 'Pino']
+        data.length && console.log('AQUÍ ESTÁN MIS DATOS', data) // Esta lógica es similar a la que se usa en REACT para renderizar "listas" de datos
+
+        // Conditional expressions
+
+        // I -> Estudio de casos a través de condicional if/else
+        const fruit = 'Naranja'
+
+        if (fruit === 'Manzana') {
+            console.log('LA CONDICION SE CUMPLE')
+        }
+        else if (fruit === 'Piñita') {
+            console.log('Tengo la piñita')
+        }
+        else if (fruit === 'Apple') {
+            console.log('TENGO LA MANZANA')
+        }
+        else {
+            console.log('NINGUNA DE LAS CONDICIONES SE CUMPLE')
+        }
+
+        // WHILE LOOPS AND SWITCH
+
+        // Cuando lidiamos con un estudio de casos, es mejor servirnos de un SWITCH.
+        // Los switch statements poseen una sintaxis más concisa.
+
+        switch (fruit) {
+            case 'banana':
+                console.log('SALGO YO, TÍO')
+                break;
+            case 'pineapple':
+                console.log('Soy una piña')
+                break;
+            case 'banana':
+                console.log('Soy una mansana')
+                break;
+            case 'orange':
+                console.log('Soy de color')
+                break;
+            case 'tomato':
+                console.log('Soy rojito')
+                break;
+        }
+
+        let counter = 1
+
+        while (counter < 5) {
+            console.log(`esta es la iteración ${counter}`)
+            counter++
+        }
+
+        // Esto de abajo [140-142] es un BUCLE INFINITO --> Mejor no abras el Navegador con estas líneas descomentadas...
+
+        // while (true) {
+        //     console.log('ESTAMOS JODIDOS, APAGA EL ORDI QUE SE TE QUEMA')
+        // }
+
+    </script>
+</body>
+
+</html>
